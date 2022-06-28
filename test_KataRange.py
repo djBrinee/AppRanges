@@ -1,5 +1,6 @@
 import pytest
-#from KataRangePack import RangeClass
+
+from KataRangePack import RangeClass
 
 obj1 = RangeClass("(2,3)")
 obj2 = RangeClass("[2,5)")
