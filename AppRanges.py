@@ -10,9 +10,11 @@ def Menu():
     return ""
 
 def Main():
-    Choice = input("insert the number to which option you choose: ")
+    Choice = input("Insert the number to which option you choose: ")
+    
     if(Choice == '1'):
         Range = input("Select your range to know its endpoints: ")
+        Range = Range.strip()
         Range = RangeClass(Range)
         if(Range.range_validation() == True):
             print("\nThe endpoints are: " + Range.EndPoints())
@@ -21,6 +23,7 @@ def Main():
 
     elif(Choice == '2'):
         Range = input("Select your range to know all the points of it: ")
+        Range = Range.strip()
         Range = RangeClass(Range)
         if(Range.range_validation() == True):
             print("\n All the points are: " + Range.allPoints())
@@ -29,8 +32,10 @@ def Main():
 
     elif(Choice == '3'):
         Range1 = input("Select the first range: ")
+        Range1 = Range1.strip()
         Range1 = RangeClass(Range1)
         Range2 = input("Select the second range: ")
+        Range2 = Range2.strip()
         Range2 = RangeClass(Range2)
 
         if(Range1.range_validation() == True and Range2.range_validation() == True):
@@ -43,8 +48,10 @@ def Main():
 
     elif(Choice == '4'):
         Range1 = input("Select the first range: ")
+        Range1 = Range1.strip()
         Range1 = RangeClass(Range1)
         Range2 = input("Select the second range: ")
+        Range2 = Range2.strip()
         Range2 = RangeClass(Range2)
 
         if(Range1.range_validation() == True and Range2.range_validation() == True):
@@ -67,5 +74,6 @@ while True:
         os.system('CLS')
         print(Menu())
         print(Main())
+        dec = ''
     else:
         break
