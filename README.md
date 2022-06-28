@@ -18,7 +18,7 @@ $ pip install KataRangesPack
 ````
 2. using in Terminal the command:
 ```
-$ AppRanges.py
+$ python3 AppRanges.py
 ```
 
 

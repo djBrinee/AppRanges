@@ -6,8 +6,8 @@ def Menu():
     print("1. EndPoints")
     print("2. AllPoints")
     print("3. Equals")
-    print("4. OverLaps\n\n")
-
+    print("4. OverLaps")
+    return ""
 
 def Main():
     Choice = input("insert the number to which option you choose: ")
@@ -15,7 +15,7 @@ def Main():
         Range = input("Select your range to know its endpoints: ")
         Range = RangeClass(Range)
         if(Range.range_validation() == True):
-            print("\nThe endpoints are: " + Range.endpoints())
+            print("\nThe endpoints are: " + Range.EndPoints())
         else:
             print("\nThe range is not valid, verify it.")
 
@@ -57,7 +57,7 @@ def Main():
 
     else:
         print("Error, please choose one of the options (1,2,3, or 4):\t")
-
+    return ""
 
 while True:
     print(Menu())
